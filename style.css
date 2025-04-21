@@ -1,0 +1,283 @@
+        :root {
+            --primary: #1B2D3A;
+            --secondary: #F4F1DE;
+            --accent: #B68D40;
+            --background: #121920;
+            --text: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-top:60px;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 1rem;
+            background: linear-gradient(180deg, rgba(27,45,58,0.95) 0%, rgba(27,45,58,0.8) 100%);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            max-width: 60px;
+        }
+        .logo {
+            display:flex;
+            align-items: center;
+        } 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(18,25,32,0.8), rgba(18,25,32,0.8)),
+                        url('images/photos/DSC05878.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Team Cards */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .team-card {
+            background: rgba(27,45,58,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .team-card img {
+            max-width: 100%;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(27,45,58,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .service-card ul{
+            margin-top : 25px;
+        }
+
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            background: rgba(27,45,58,0.3);
+            border: 1px solid var(--accent);
+            color: var(--text);
+            border-radius: 4px;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: var(--text);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #937B3B;
+        }
+
+        .social-links img{
+            max-width: 50px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(27,45,58,0.95);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about-image {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .discipline-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .discipline-card {
+            background: rgba(27,45,58,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .gala-section {
+            background: linear-gradient(rgba(18,25,32,0.9), rgba(18,25,32,0.9)),
+                        url('images/photos/Capture.PNG');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: var(--text);
+            padding: 6rem 0;
+        }
+
+        .gala-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .schedule {
+            background: rgba(27,45,58,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background: rgba(27,45,58,0.3);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content,
+            .discipline-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
